@@ -8,12 +8,12 @@ docker run -d \
     -p 80:80 \
     -p 443:443 \
     -p 8080:8080 \
-    -e TZ="America/Chicago" \
+    -e TZ="Asia/Dhaka" \
     -v "$(pwd)/etc-pihole/:/etc/pihole/" \
     -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
     --dns=127.0.0.1 --dns=1.1.1.1 \
     --restart=unless-stopped \
-    thenetworkchuck/networkchuck_pihole
+    thesagornetwork/sagornetwork_pihole
 
 printf 'Starting up pihole container '
 for i in $(seq 1 20); do
